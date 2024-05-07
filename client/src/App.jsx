@@ -9,12 +9,14 @@ import HomePage from "./pages/HomePage";
 
 import ProtectedRoute from "./ProtectedRoute";
 import { TaskProvider } from "./context/TasksContext";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
     <AuthProvider>
       <TaskProvider>
         <BrowserRouter>
+          <Navbar></Navbar>
           <Routes>
             <Route path="/" element={<HomePage></HomePage>}></Route>
             <Route path="/login" element={<LoginPage />}></Route>
