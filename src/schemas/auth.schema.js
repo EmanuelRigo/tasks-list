@@ -24,7 +24,7 @@ export const loginSchema = z.object({
       required_error: "Email is required",
     })
     .email({
-      message: "invalid Email",
+      message: "Email is not valid",
     }),
   password: z.string({ required_error: "password is required" }).min(6, {
     message: "password must be at least 6 characters",
