@@ -5,7 +5,7 @@ const Navbar = () => {
   const { isAuthenticated, logout, user } = useAuth();
 
   return (
-    <nav className="bg-zinc-700 my-3 flex justify-between py-5 px-10">
+    <nav className="bg-zinc-700 my-3 flex justify-between py-5 px-10 rounded-md">
       <Link to="/">
         <h1 className="text-2x1 font-bold">task manager</h1>
       </Link>
@@ -14,7 +14,10 @@ const Navbar = () => {
           <>
             <li>Welcome {user.username}</li>
             <li>
-              <Link to="/add-task" className="bg-indigo-500 px-4 py-1">
+              <Link
+                to="/add-task"
+                className="bg-indigo-500 px-4 py-1 rounded-md"
+              >
                 Add Task
               </Link>
             </li>
@@ -32,12 +35,15 @@ const Navbar = () => {
         ) : (
           <>
             <li>
-              <Link to="/login" className="bg-indigo-500 px-4 py-1">
+              <Link to="/login" className="bg-indigo-500 px-4 py-1 rounded-md">
                 Login
               </Link>
             </li>
             <li>
-              <Link to="/register" className="bg-indigo-500 px-4 py-1">
+              <Link
+                to="/register"
+                className="bg-indigo-500 px-4 py-1 rounded-md"
+              >
                 Register
               </Link>
             </li>
